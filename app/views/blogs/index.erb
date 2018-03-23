@@ -1,0 +1,10 @@
+<h1>Blogs</h1>
+
+<dl>
+<% @blogs.each do |blog| %>
+  <dt><%= link_to log.title, blog %></dt>
+  <dd><%= blog.description %></dd>
+<% end %>
+</dl>
+
+<%= link_to "Create New", new_blog_path %>
