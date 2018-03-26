@@ -2,7 +2,7 @@
 
 <dl>
 <% @blogs.each do |blog| %>
-  <dt><%= link_to log.title, blog %></dt>
+  <dt><%= link_to blog.title, blog %></dt>
   <dd><%= blog.description %></dd>
 <% end %>
 </dl>

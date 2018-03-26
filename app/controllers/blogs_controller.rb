@@ -11,11 +11,11 @@ class BlogsController < ApplicationController
   end
 
   def create
-    # How do I set the 
+    fields = params.require(:blog).permit(:title, :description)
     @blog = Blog.create! uuid: Blog.uuid,
-      user: current_user,
-      title: params.require(:blog).require(:title),
-      description: params.require(:blog).permit(:description)
+      user: User.find_by(userid: 'gwade'),
+      title: fields[:title],
+      description: fields[:description]
 
     redirect_to(@blog)
   end
