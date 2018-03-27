@@ -9,11 +9,13 @@
 User.create(uuid: User.uuid,
             userid: 'gwade',
             name: 'G. Wade Johnson',
-            password: 'my_secret_password'
+            password: 'my_secret_password',
+            email: 'gwade@example.com',
            );
 
 User.create(uuid: User.uuid,
             userid: 'fred',
             name: 'Panzifredicopicog',
-            password: 'not the Fredmobile'
+            password: 'not the Fredmobile',
+            email: 'fred@example.com'
            );

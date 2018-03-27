@@ -13,7 +13,7 @@ class BlogsController < ApplicationController
   def create
     fields = params.require(:blog).permit(:title, :description)
     @blog = Blog.create! uuid: Blog.uuid,
-      user: User.find_by(userid: 'gwade'),
+      user: current_user,
       title: fields[:title],
       description: fields[:description]
 
