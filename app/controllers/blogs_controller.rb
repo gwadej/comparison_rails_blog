@@ -1,4 +1,6 @@
 class BlogsController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     @blogs = Blog.order(:title)
   end
@@ -51,6 +53,6 @@ class BlogsController < ApplicationController
   end
 
   def blog_params
-    params.require(:blog).permit(:title, :description).to_hash
+    params.require(:blog).permit(:title, :description).to_hash.transform_keys(&:to_sym)
   end
 end

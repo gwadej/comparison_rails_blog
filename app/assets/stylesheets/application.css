@@ -13,3 +13,14 @@
  *= require_tree .
  *= require_self
  */
+
+.pull-right {
+    float: right;
+}
+.byline {
+    font-weight: normal;
+    font-size: 50%;
+}
+h1 {
+    clear: both;
+}
